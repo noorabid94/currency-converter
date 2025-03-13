@@ -11,7 +11,7 @@ const GetStarted = () => {
       <p className={styles.subtitle}>Easy Exchange</p>
       <button 
         className={styles.getStartedBtn} 
-        onClick={() => router.push("/currency")}  // ✅ This should work
+        onClick={() => router.push("/currency")}  
       >
         Get Started
       </button>
