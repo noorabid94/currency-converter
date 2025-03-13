@@ -1,0 +1,49 @@
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); /* More flexible */
+  gap: 10px;
+  margin-top: 15px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  justify-content: center;
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.key {
+  padding: 12px;
+  font-size: clamp(14px, 4vw, 22px); /* Slightly more adaptive */
+  font-weight: bold;
+  background: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  min-width: 55px; /* Slightly reduced for flexibility */
+  min-height: 55px;
+  text-align: center;
+}
+
+.key:hover {
+  background: #ff9800;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* ✅ Enhanced Mobile Responsiveness */
+@media (max-width: 480px) {
+  .keypad {
+    grid-template-columns: repeat(3, minmax(45px, 1fr)); /* More compact on mobile */
+    max-width: 230px;
+    gap: 8px; /* Reduce spacing */
+  }
+
+  .key {
+    padding: 8px;
+    font-size: 14px;
+    min-width: 45px;
+    min-height: 45px;
+  }
+}

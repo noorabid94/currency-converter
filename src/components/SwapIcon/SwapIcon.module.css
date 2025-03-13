@@ -1,0 +1,50 @@
+.swapIcon {
+  font-size: 24px;
+  padding: 12px;
+  background: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+  
+  /* Ensuring proper centering */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Adjusting size for better responsiveness */
+  width: 50px;
+  height: 50px;
+
+  /* Adjusting position */
+  position: relative;
+  margin-top: 15px; /* Moves the icon lower */
+}
+
+/* Hover effect */
+.swapIcon:hover {
+  transform: rotate(180deg);
+  background: #e68900;
+}
+
+/* 📱 Responsive Design Adjustments */
+@media (max-width: 768px) {
+  .swapIcon {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 10px; /* Adjusted for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .swapIcon {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+    padding: 8px;
+    margin-top: 8px; /* Adjusted for very small screens */
+  }
+}

@@ -1,0 +1,21 @@
+body {
+  overflow: hidden;
+  min-height: 100vh;
+  height: 100vh; /* Ensures full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* Optional: Light background for better contrast */
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  body {
+    height: auto; /* Allow content to expand on smaller screens */
+    min-height: 100vh;
+    flex-direction: column; /* Stack content vertically */
+    padding: 10px; /* Prevent content from touching edges */
+  }
+}

@@ -1,0 +1,106 @@
+/* Background Animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: scale(0.9);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+/* Button Hover Animation */
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  }
+  100% {
+      transform: scale(1);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+}
+
+.container {
+  max-width: 450px;
+  width: 90%;
+  padding: 20px;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: white;
+  margin: auto; /* Centers the container */
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Responsive Title */
+.title {
+  font-size: clamp(2rem, 5vw, 3rem); /* Scales dynamically */
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  opacity: 0.8;
+  margin-bottom: 20px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Responsive Button */
+.getStartedBtn {
+  padding: 12px 30px;
+  font-size: clamp(14px, 2vw, 16px); /* Dynamic font size */
+  font-weight: bold;
+  background: linear-gradient(135deg, #ff9800, #ff5722);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.getStartedBtn:hover {
+  animation: pulse 1s infinite;
+  background: linear-gradient(135deg, #ff5722, #ff9800);
+  transform: scale(1.05);
+}
+
+.getStartedBtn:active {
+  transform: scale(0.95);
+}
+
+/* 🔹 Responsive Adjustments */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    max-width: 350px;
+    padding: 15px;
+  }
+
+  .getStartedBtn {
+    padding: 10px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    max-width: 320px;
+    padding: 12px;
+  }
+
+  .getStartedBtn {
+    padding: 8px 20px;
+  }
+}

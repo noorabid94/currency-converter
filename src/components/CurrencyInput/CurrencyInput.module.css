@@ -1,0 +1,47 @@
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px; /* Reduced spacing */
+  padding: 8px; /* Smaller padding */
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px; /* Slightly smaller border radius */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15); /* Slightly lighter shadow */
+  transition: 0.3s ease-in-out;
+  width: 90%; /* Keeps it adaptive */
+  max-width: 300px; /* Made smaller */
+}
+
+.inputContainer:hover {
+  transform: scale(1.02);
+}
+
+/* Reduce size of input fields */
+.inputField {
+  max-width: 120px; /* Smaller input */
+  font-size: 18px; /* Reduce text size */
+  padding: 8px; /* Less padding */
+}
+
+.currencySelect {
+  max-width: 180px; /* Slightly smaller */
+  font-size: 14px; /* Reduce font size */
+}
+
+/* ✅ Mobile Responsiveness */
+@media (max-width: 480px) {
+  .inputContainer {
+    max-width: 220px; /* Even smaller for mobile */
+    padding: 6px;
+  }
+
+  .currencySelect {
+    font-size: 13px;
+    max-width: 160px;
+  }
+
+  .inputField {
+    font-size: 16px;
+    max-width: 110px;
+  }
+}
